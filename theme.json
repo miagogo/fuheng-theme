@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": { "contentSize": "1280px", "wideSize": "1280px" },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        { "fontFamily": "\"Noto Serif TC\", serif", "slug": "serif", "name": "Noto Serif TC" },
+        { "fontFamily": "\"Noto Sans TC\", sans-serif", "slug": "sans", "name": "Noto Sans TC" }
+      ],
+      "fontSizes": [
+        { "slug": "base", "size": "16px", "name": "Base" },
+        { "slug": "lead", "size": "20px", "name": "Lead" },
+        { "slug": "h2", "size": "clamp(2.4rem, 6.2vw, 5.2rem)", "name": "Heading" }
+      ]
+    },
+    "color": {
+      "palette": [
+        { "slug": "navy", "color": "#0A1C30", "name": "Navy" },
+        { "slug": "navy-2", "color": "#12304C", "name": "Navy 2" },
+        { "slug": "cream", "color": "#E9F1F8", "name": "Cream" },
+        { "slug": "cream-2", "color": "#D7E6F2", "name": "Cream 2" },
+        { "slug": "ink", "color": "#13212E", "name": "Ink" },
+        { "slug": "ink-soft", "color": "#516373", "name": "Ink Soft" },
+        { "slug": "gold", "color": "#3FA7E0", "name": "Sky" },
+        { "slug": "gold-deep", "color": "#15689A", "name": "Sky Deep" }
+      ]
+    }
+  },
+  "styles": {
+    "typography": { "fontFamily": "\"Noto Sans TC\", sans-serif", "fontSize": "16px", "lineHeight": "1.9" },
+    "color": { "background": "#E9F1F8", "text": "#13212E" }
+  }
+}

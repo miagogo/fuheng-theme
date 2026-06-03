@@ -1,0 +1,30 @@
+# === WordPress / 環境機密 ===
+wp-config.php
+.env
+.env.*
+*.log
+
+# === 媒體與快取（不追蹤上傳/快取）===
+uploads/
+wp-content/uploads/
+cache/
+.cache/
+*.cache
+
+# === 相依套件 ===
+node_modules/
+vendor/
+
+# === 建置暫存 ===
+_tmp/
+_gen*.js
+dist/
+build/
+
+# === 編輯器 / 系統 ===
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.sublime-*
