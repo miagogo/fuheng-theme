@@ -1,0 +1,31 @@
+/*
+ * fuheng-editor.css — 僅在區塊編輯器（iframe）載入。
+ * 前台靠 JS 控制的可見性與視窗單位版面，在編輯器內 JS 不會執行，
+ * 這裡把它們還原成可見、可編輯的靜態狀態，讓編輯器預覽接近實際版面。
+ */
+
+/* 1) 捲動進場元素：前台預設 opacity:0，等 JS 加 .in 才顯示 → 編輯器直接顯示 */
+.editor-styles-wrapper [data-reveal] { opacity: 1 !important; transform: none !important; }
+
+/* 2) 作品集卡片：前台預設 opacity:0、由 JS 分頁/進場控制 → 全部顯示 */
+.editor-styles-wrapper .gallery2 .gitem { opacity: 1 !important; transform: none !important; }
+.editor-styles-wrapper .gallery2 .gitem.hide { display: block !important; }
+
+/* 3) 常見問答：答案前台預設收合，編輯時全部展開方便改字 */
+.editor-styles-wrapper .faq-a,
+.editor-styles-wrapper .faq-a.open { max-height: none !important; overflow: visible !important; }
+
+/* 4) Hero：不要用 100vh，避免編輯器內過高 */
+.editor-styles-wrapper .hero { min-height: 560px !important; }
+.editor-styles-wrapper .scroll-hint { display: none !important; }
+
+/* 5) 客戶好評：編輯器無 JS 拖曳，改為可橫向捲動，避免溢出/空白 */
+.editor-styles-wrapper .tcar-full { overflow-x: auto !important; }
+
+/* 6) 全幅區段在編輯器內也佔滿可用寬度（前台是滿版背景區塊）*/
+.editor-styles-wrapper .wp-block-post-content { max-width: none !important; }
+.editor-styles-wrapper .wp-block-post-content > * { max-width: none !important; }
+
+/* 7) 固定定位的燈箱覆蓋層在編輯器內不需要顯示 */
+.editor-styles-wrapper #lightbox,
+.editor-styles-wrapper #tlightbox { display: none !important; }

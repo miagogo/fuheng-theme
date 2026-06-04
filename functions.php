@@ -20,6 +20,15 @@ function fuheng_block_assets() {
     array('fuheng-fonts'),
     $ver
   );
+  // 編輯器專用修正：載入到區塊編輯器 iframe（JS 不執行時的可見性/版面還原）
+  if (is_admin()) {
+    wp_enqueue_style(
+      'fuheng-editor',
+      get_theme_file_uri('assets/css/fuheng-editor.css'),
+      array('fuheng-design'),
+      $ver
+    );
+  }
 }
 add_action('enqueue_block_assets', 'fuheng_block_assets');
 
